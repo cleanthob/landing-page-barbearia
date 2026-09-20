@@ -21,6 +21,7 @@ body {
   background: var(--black);
   color: var(--cream);
   font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
 }
 button {
   font: inherit;
@@ -575,45 +576,139 @@ footer small {
   }
 }
 @media (max-width: 560px) {
+  .nav {
+    height: 72px;
+    padding: 0 20px;
+  }
+  .brand {
+    font-size: 13px;
+    letter-spacing: 0.12em;
+  }
+  .brand span,
+  .footer-brand span {
+    font-size: 6px;
+    letter-spacing: 0.28em;
+  }
+  .menu {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+  }
+  .hero {
+    min-height: 86vh;
+  }
+  .hero-content {
+    width: min(100%, 100%);
+    margin-left: 0;
+    padding: 90px 20px 70px;
+  }
+  .hero-bottom {
+    left: 20px;
+    right: 20px;
+    justify-content: center;
+    gap: 10px;
+  }
   h1 {
-    font-size: 58px;
+    font-size: clamp(42px, 14vw, 58px);
   }
   .hero-copy {
     font-size: 13px;
+    max-width: 100%;
   }
   .hero-actions {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    width: 100%;
+    gap: 16px;
+  }
+  .gold-btn,
+  .text-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .section {
+    padding: 80px 20px;
+  }
+  .section-head h2 {
+    font-size: clamp(36px, 10vw, 52px);
+  }
+  .section-head > p {
+    font-size: 12px;
   }
   .service-grid {
     grid-template-columns: 1fr;
   }
   .service-card {
+    min-height: 260px;
     border-left: 1px solid var(--line) !important;
+  }
+  .service-card p {
+    max-width: 100%;
+  }
+  .about {
+    gap: 28px;
+  }
+  .about-image {
+    height: 340px;
+  }
+  .stats {
+    flex-wrap: wrap;
+    gap: 18px 26px;
+  }
+  .stats strong {
+    font-size: 24px;
   }
   .gallery {
     display: flex;
     flex-direction: column;
+    gap: 10px;
   }
-  .gallery-item {
+  .gallery-item,
+  .g1 {
     height: 260px;
   }
-  .g1 {
-    height: 360px;
+  .quote {
+    padding: 100px 20px;
   }
-  .section-head h2 {
-    font-size: 43px;
+  .quote blockquote {
+    font-size: clamp(26px, 7vw, 38px);
   }
-  .stats {
-    flex-wrap: wrap;
+  .testimonial {
+    padding: 24px 20px;
+    min-height: 200px;
   }
-  .stats div {
-    min-width: 75px;
+  .testimonial p {
+    font-size: 15px;
+  }
+  .booking {
+    min-height: 560px;
+  }
+  .booking h2 {
+    font-size: clamp(40px, 12vw, 62px);
+  }
+  .booking-content {
+    padding: 0 20px;
+  }
+  .contact-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 22px;
+  }
+  .contact-details span {
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
   }
   footer {
     grid-template-columns: 1fr auto;
+    padding: 32px 20px;
   }
   footer p {
     display: none;
+  }
+  .footer-brand {
+    font-size: 14px;
   }
 }
